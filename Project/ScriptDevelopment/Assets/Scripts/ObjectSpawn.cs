@@ -15,7 +15,7 @@ public class ObjectSpawn : MonoBehaviour
     }
     public List<Objects> ObjectSpawns;
     public List<Transform> spawnpoints;
-    void Update()
+    void Start()
     {
         SpawnObjects();
     }
@@ -35,7 +35,7 @@ public class ObjectSpawn : MonoBehaviour
                 int EmptySpawn = Random.Range(0, ObjectSpawns.Count);
                 Instantiate(ObjectSpawns[EmptySpawn].Empty, t.position, t.rotation);
             }
-            else if(Rand <= 75 && Rand > 50)
+            else if (Rand <= 75 && Rand > 50)
             {
                 int SlippageSpawn = Random.Range(0, ObjectSpawns.Count);
                 Instantiate(ObjectSpawns[SlippageSpawn].Slippage, t.position, t.rotation);
