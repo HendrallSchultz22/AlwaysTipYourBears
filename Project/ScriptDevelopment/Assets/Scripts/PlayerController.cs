@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,13 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 1f;
     public float JumpForce = 250f;
     public bool isGrounded;
+    [Header("UI Components")]
+    public Slider ProgressBar;
+    public int Hiber_Health;
+    public Slider SpeedMeter;
+    public Text Status;
+     
+   
 
     [Header("GameObject Components")]
     public Rigidbody rb;
