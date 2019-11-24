@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AutoDelete.cs" />
     <Compile Include="Assets\Scripts\CameraControllers.cs" />
     <Compile Include="Assets\Scripts\HallwaySpawner.cs" />
     <Compile Include="Assets\Scripts\NpcSpawn.cs" />
