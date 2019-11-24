@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4820962422561759587}
   - component: {fileID: 4592679280449936213}
   - component: {fileID: 7818512920635516844}
+  - component: {fileID: 909590887753968227}
+  - component: {fileID: 1183200643412600245}
+  - component: {fileID: 6847505472882492217}
   m_Layer: 0
   m_Name: hallwaycrossectionnolights
   m_TagString: Untagged
@@ -26,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8411640118873035632}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 1.58, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 21, y: 21, z: 21}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +85,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &909590887753968227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411640118873035632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2916538, y: 0.012322965, z: 0.26845267}
+  m_Center: {x: 0, y: -0.077651136, z: 0}
+--- !u!65 &1183200643412600245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411640118873035632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2916538, y: 0.16762514, z: 0.03981156}
+  m_Center: {x: 0, y: 0, z: 0.11432056}
+--- !u!65 &6847505472882492217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411640118873035632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2916538, y: 0.16762514, z: 0.040116634}
+  m_Center: {x: 0, y: 0, z: -0.11416808}

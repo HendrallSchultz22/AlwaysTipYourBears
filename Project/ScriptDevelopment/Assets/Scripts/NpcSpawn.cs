@@ -22,12 +22,12 @@ public class NpcSpawn : MonoBehaviour
         foreach (Transform t in spawnpoints)
         {
             int Rand = Random.Range(0, 100);
-            if (Rand <= 60)
+            if (Rand <= 15)
             {
                 int VictimSpawn = Random.Range(0, Generate.Count);
                 Instantiate(Generate[VictimSpawn].Victim, t.position, t.rotation);
             }
-            else if (Rand <= 85 && Rand > 60)
+            else if (Rand <= 90 && Rand > 15)
             {
                 int EmptySpawn = Random.Range(0, Generate.Count);
                 Instantiate(Generate[EmptySpawn].Empty, t.position, t.rotation);

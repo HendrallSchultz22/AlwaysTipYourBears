@@ -25,17 +25,17 @@ public class ObjectSpawn : MonoBehaviour
         foreach (Transform t in spawnpoints)
         {
             int Rand = Random.Range(0, 100);
-            if (Rand <= 25)
+            if (Rand <= 7)
             {
                 int FlowerPotSpawn = Random.Range(0, ObjectSpawns.Count);
                 Instantiate(ObjectSpawns[FlowerPotSpawn].FlowerPot, t.position, t.rotation);
             }
-            else if (Rand <= 50 && Rand > 25)
+            else if (Rand <= 50 && Rand > 7)
             {
                 int EmptySpawn = Random.Range(0, ObjectSpawns.Count);
                 Instantiate(ObjectSpawns[EmptySpawn].Empty, t.position, t.rotation);
             }
-            else if (Rand <= 75 && Rand > 50)
+            else if (Rand <= 90 && Rand > 50)
             {
                 int SlippageSpawn = Random.Range(0, ObjectSpawns.Count);
                 Instantiate(ObjectSpawns[SlippageSpawn].Slippage, t.position, t.rotation);

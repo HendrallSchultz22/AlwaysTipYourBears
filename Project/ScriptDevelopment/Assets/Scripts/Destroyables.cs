@@ -12,26 +12,23 @@ public class Destroyables : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerController Bear = other.gameObject.GetComponent<PlayerController>();
+       
         if (isAVictim)
         {
-            Bear.Hiber_Health += 5;
+            PlayerController.Hiber_Health += 5;
         }
         else if (isAHunter)
         {
-            Bear.Hiber_Health -= 10;
+            PlayerController.Hiber_Health -= 10;
         }
-        else if (isASlippage)
-        {
-            Bear.movementSpeed = 2.5f;
-        }
+        
         else if (iSACart)
         {
-            Bear.Hiber_Health -= 5;
+            PlayerController.Hiber_Health -= 5;
         }
         else if (isACactus)
         {
-            Bear.Hiber_Health -= 5;
+            PlayerController.Hiber_Health -= 5;
         }
     }
 }

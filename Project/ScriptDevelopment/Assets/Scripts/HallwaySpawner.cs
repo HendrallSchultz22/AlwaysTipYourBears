@@ -61,7 +61,7 @@ public class HallwaySpawner : MonoBehaviour
 
             for (int i = _instantiatedObjects.Count + 1; i < hallwayMax; i++)
             {
-                objectPos.z += 1; // Previous object's position + 10 is the spawn point for _instance
+                objectPos.x += 1; // Previous object's position + 10 is the spawn point for _instance
             }
 
             Instantiate(_instance, objectPos, Quaternion.identity); // Instantiate _instance

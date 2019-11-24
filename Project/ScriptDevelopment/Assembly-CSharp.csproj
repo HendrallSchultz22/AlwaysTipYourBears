@@ -66,11 +66,13 @@
     <Compile Include="Assets\Scripts\CameraControllers.cs" />
     <Compile Include="Assets\Scripts\Destroyables.cs" />
     <Compile Include="Assets\Scripts\HallwaySpawner.cs" />
+    <Compile Include="Assets\Scripts\mang.cs" />
     <Compile Include="Assets\Scripts\NpcSpawn.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\OutOfBounds.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SolidSurface.cs" />
+    <Compile Include="Assets\Scripts\spawn.cs" />
     <Compile Include="Assets\Scripts\spin.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/NHTI/Documents/GitHub/AlwaysTipYourBears/Project/ScriptDevelopment/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

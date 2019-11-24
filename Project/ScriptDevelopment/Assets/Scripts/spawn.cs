@@ -13,17 +13,18 @@ public class spawn : MonoBehaviour
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("GameController");
-       if (manager.GetComponent<mang>().count < 100)
+       if (manager.GetComponent<mang>().count < 500)
         {
             generate();
         }
     }
     void generate()
     {
+        
         foreach (Transform t in spawnpoints)
-        {
-            Instantiate(hall, t.position, t.rotation);
-            manager.GetComponent<mang>().count++;
+        {           
+                Instantiate(hall, t.position, t.rotation);
+                manager.GetComponent<mang>().count++;         
         }
     }
 }

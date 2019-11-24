@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI Components")]
     public Slider ProgressBar;
-    public float Hiber_Health = 100f;
+    public static float Hiber_Health = 100f;
     public Slider SpeedMeter;
 
     [Header("UI Scenes")]
@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public GameObject UiPanel;
     public GameObject BadEnd;
     public GameObject GoodEnd;
+    public Text speed;
+    public Text hiber;
 
     [Header("GameObject Components")]
     public Rigidbody rb;
@@ -42,9 +44,11 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         ProgressBar.value = Hiber_Health;
-        Hiber_Health -= 50;
+        hiber.text = Hiber_Health.ToString();
+        Hiber_Health -= 50f;
         
         SpeedMeter.value = movementSpeed;
+        speed.text = movementSpeed.ToString();
         rb = gameObject.GetComponentInChildren<Rigidbody>();
         c = gameObject.GetComponentInChildren<Camera>();
     }
@@ -65,7 +69,10 @@ public class PlayerController : MonoBehaviour
         if (IsAlive)
         {
             ProgressBar.value = Hiber_Health;
-            if(Hiber_Health <= 0)
+            hiber.text = Hiber_Health.ToString();
+            SpeedMeter.value = movementSpeed;
+            speed.text = movementSpeed.ToString();
+            if (Hiber_Health <= 0)
             {
                 IsAlive = false;
                 onDeath();
@@ -73,6 +80,24 @@ public class PlayerController : MonoBehaviour
             else if(Hiber_Health >= 100)
             {
                 GoodEnd.SetActive(true);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.W) && movementSpeed < 6f && movementSpeed > 1f)
+        {
+            
+            movementSpeed--;
+            if (movementSpeed <= 1)
+            {
+                movementSpeed = 2;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && movementSpeed < 6f && movementSpeed > 1f)
+        {
+           
+            movementSpeed++;
+            if (movementSpeed >= 6)
+            {
+                movementSpeed = 5;
             }
         }
 
@@ -102,14 +127,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity -= new Vector3(0, 0, (movementSpeed * 0.1f));
         }
-        if (Input.GetKey(KeyCode.W) == true && movementSpeed <= 7f && movementSpeed >= 1f)
-        {
-            movementSpeed -= .5f;
-        }
-        if(Input.GetKey(KeyCode.Q) == true && movementSpeed <= 7f && movementSpeed >= 1f)
-        {
-            movementSpeed += .5f;
-        }
+       
         
         
     }
@@ -135,9 +153,9 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroyables destro = other.gameObject.GetComponent<Destroyables>();
-        if (other)
+        if (destro)
         {
-            Destroy(other);
+            Destroy(other.gameObject);
             Instantiate(DeathDecal, other.transform.position, other.transform.rotation);
         }
     }
